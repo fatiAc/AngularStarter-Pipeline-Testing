@@ -22,7 +22,7 @@ describe('HeroComponent (shallow tests) ', () => {
     fixture.componentInstance.hero = { id: 1, name: 'fatima', strength: 88 };
     fixture.detectChanges();
     expect(fixture.nativeElement.querySelector('a').textContent).toContain(
-      'fatima'
+      'fatimaaaa'
     );
   });
 });

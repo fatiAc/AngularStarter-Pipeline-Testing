@@ -24,8 +24,8 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      #- name: Run tests
-       # run: npm run test -- --watch=false --browsers=ChromeHeadlessCI
+      - name: Run tests
+        run: npm run test -- --watch=false --browsers=ChromeHeadlessCI
 
       - name: Build the app
         run: npm run build --prod
