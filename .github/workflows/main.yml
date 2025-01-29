@@ -1,0 +1,37 @@
+name: Build and Test Angular App
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '19'  # Spécifie la version de Node.js
+
+      - name: Install dependencies
+        run: npm install
+
+      #- name: Run tests
+       # run: npm run test -- --watch=false --browsers=ChromeHeadlessCI
+
+      - name: Build the app
+        run: npm run build --prod
+
+      - name: Upload build artifact (optional)
+        uses: actions/upload-artifact@v3
+        with:
+          name: angular-build
+          path: dist/
