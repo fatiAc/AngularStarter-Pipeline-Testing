@@ -4,6 +4,10 @@ module.exports = function(config) {
     frameworks: ['jasmine'],
     files: [
       // Your test files here
+      "src/**/*.spec.ts",
+    "src/**/*.d.ts",
+    "src/*.spec.ts",
+    "src/app/**/*.spec.ts"
     ],
     preprocessors: {
       // Your preprocessors here
