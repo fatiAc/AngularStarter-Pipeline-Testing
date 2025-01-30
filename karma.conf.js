@@ -8,8 +8,12 @@ module.exports = function(config) {
     preprocessors: {
       // Your preprocessors here
     },
-    browsers: ['ChromeHeadless'],  // Use the full Chrome browser instead of ChromeHeadless
+    browsers: ['ChromeHeadless','Chrome', 'ChromeHeadless'],  // Use the full Chrome browser instead of ChromeHeadless
     customLaunchers: {
+      ChromeHeadlessCI: {
+        base: 'ChromeHeadless',
+        flags: ['--no-sandbox']
+      },
       Chrome: {
         base: 'Chrome',
         flags: ['--no-sandbox', '--disable-gpu']  // Optional flags for better CI environment compatibility
