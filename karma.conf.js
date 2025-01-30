@@ -2,7 +2,10 @@ module.exports = function(config) {
   config.set({
     basePath: '',
     frameworks: ['jasmine'],
-    files: [
+    files: [ {
+      pattern: 'src/**/*.ts',
+      type: 'js'  // to silence the warning. Means load with <script> tag
+    },
       // Your test files here
       "src/**/*.spec.ts",
     "src/**/*.d.ts",
