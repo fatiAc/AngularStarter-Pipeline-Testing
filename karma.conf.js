@@ -8,7 +8,7 @@ module.exports = function(config) {
     preprocessors: {
       // Your preprocessors here
     },
-    browsers: ['Chrome'],  // Use the full Chrome browser instead of ChromeHeadless
+    browsers: ['ChromeHeadless'],  // Use the full Chrome browser instead of ChromeHeadless
     customLaunchers: {
       Chrome: {
         base: 'Chrome',
